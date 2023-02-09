@@ -1,2 +1,2 @@
 # Leetcode
-To add solved Leetcode problems
+For solved Leetcode problems
