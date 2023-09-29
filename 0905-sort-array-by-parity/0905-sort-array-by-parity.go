@@ -1,15 +1,15 @@
 func sortArrayByParity(nums []int) []int {
-    eve := []int{}
-    odd := []int{}
+	left := 0
+	right := len(nums) - 1
 
-    for _, i := range nums {
-        if i % 2 == 0 {
-            eve = append(eve, i)
-        } else {
-            odd = append(odd, i)
-        }
-    }
-    
-    eve = append(eve, odd...)
-    return eve
+	for left <= right {
+		if nums[left]%2 == 0 {
+			left++
+		} else {
+			nums[left], nums[right] = nums[right], nums[left]
+			right--
+		}
+	}
+
+	return nums
 }
