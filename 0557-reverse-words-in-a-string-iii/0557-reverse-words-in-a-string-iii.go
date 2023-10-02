@@ -1,5 +1,3 @@
-import "strings"
-
 func reverseWords(s string) string {
     res := strings.Fields(s)
     for i, word := range res {
