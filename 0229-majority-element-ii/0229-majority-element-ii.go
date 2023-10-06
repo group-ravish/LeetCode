@@ -1,10 +1,9 @@
-import "fmt"
 func majorityElement(nums []int) []int {
     count := make(map[int]int)
     res := []int{}
 
-    for n := 0; n < len(nums); n++ {
-        count[nums[n]]++
+    for i := 0; i < len(nums); i++ {
+        count[nums[i]]++
     }
 
     for k, v := range count {
